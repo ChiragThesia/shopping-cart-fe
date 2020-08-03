@@ -65,7 +65,7 @@ const CartTable = ({ cartContents, totalPrice, store }) => {
 	//Making a request to get the store ID
 	useEffect(() => {
 		axios
-			.get(`https://shopping-cart-be.herokuapp.com/api/auth/pk/${getStoreID[1]}`)
+			.get(`https://shielded-journey-22349.herokuapp.com//api/auth/pk/${getStoreID[1]}`)
 			.then((res) => {
 				console.log('super res', res);
 				setPaymentPayload({ ...paymentPayload, clientID: res.data });
@@ -105,11 +105,17 @@ const CartTable = ({ cartContents, totalPrice, store }) => {
 
 		//Make a payment-intent POST request
 		axios
-			.post('https://shopping-cart-be.herokuapp.com/api/stripe/payment/create-payment-intent', paymentPayload)
+			.post(
+				'https://shielded-journey-22349.herokuapp.com//api/stripe/payment/create-payment-intent',
+				paymentPayload
+			)
 			.then((res) => {
 				console.log('orderPayload', orderPayload);
 				axios
-					.post(`https://shopping-cart-be.herokuapp.com/api/store/${getStoreID[1]}/order`, orderPayload)
+					.post(
+						`https://shielded-journey-22349.herokuapp.com//api/store/${getStoreID[1]}/order`,
+						orderPayload
+					)
 					.then((res) => {
 						setMessage('Payment Confirmed!');
 						console.log(orderPayload);

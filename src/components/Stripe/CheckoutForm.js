@@ -28,7 +28,7 @@ const CheckoutForm = (props) => {
 				};
 				if (res.paymentIntent) {
 					axios
-						.put('https://shopping-cart-be.herokuapp.com/api/payment/complete', payload)
+						.put('https://shielded-journey-22349.herokuapp.com//api/payment/complete', payload)
 						.then((res) => {
 							history.push('/success');
 						})
@@ -45,12 +45,12 @@ const CheckoutForm = (props) => {
 			});
 	};
 
-  return (
-    <form onSubmit={handleSubmit} data-testid='checkoutFormWrapper'>
-      <CardSection />
-      <button>Confirm order</button>
-    </form>
-  );
+	return (
+		<form onSubmit={handleSubmit} data-testid="checkoutFormWrapper">
+			<CardSection />
+			<button>Confirm order</button>
+		</form>
+	);
 };
 
 export default injectStripe(CheckoutForm);

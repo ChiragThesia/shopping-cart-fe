@@ -17,7 +17,7 @@ const ProfileView = () => {
 
 	useEffect(() => {
 		AxiosAuth()
-			.get('https://shopping-cart-be.herokuapp.com/api/store/')
+			.get('https://shielded-journey-22349.herokuapp.com//api/store/')
 			.then((res) => {
 				setLogo(res.data.logo);
 				setAddress(res.data.address);

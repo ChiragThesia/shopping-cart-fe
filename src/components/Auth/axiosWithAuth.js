@@ -4,7 +4,7 @@ export default function AxiosAuth() {
 	const token = localStorage.getItem('token');
 
 	const instance = axios.create({
-		baseURL: 'https://shopping-cart-be.herokuapp.com',
+		baseURL: 'https://shielded-journey-22349.herokuapp.com/',
 		headers: {
 			'Content-Type': 'application/json',
 			Authorization: token,
