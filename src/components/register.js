@@ -8,7 +8,7 @@ import history from '../history';
 import { setLoading, setErrors, clearErrors } from '../state/actionCreators';
 import { connect } from 'react-redux';
 
-const signupURL = 'https://shielded-journey-22349.herokuapp.com//api/auth/register';
+const signupURL = 'https://ecommerce-app-be.herokuapp.com//api/auth/register';
 const RegistrationForm = (props) => {
 	const [ confirmDirty, setConfirmDirty ] = useState(false);
 	const handleSubmit = (e) => {

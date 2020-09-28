@@ -14,7 +14,7 @@ const OrderDetailsView = (props) => {
 	useEffect(
 		() => {
 			axiosWithAuth()
-				.get(`https://shielded-journey-22349.herokuapp.com//api/store/order/${orderId}`)
+				.get(`https://ecommerce-app-be.herokuapp.com//api/store/order/${orderId}`)
 				.then((res) => {
 					console.log(res.data);
 					setOrder(res.data.orderItem);

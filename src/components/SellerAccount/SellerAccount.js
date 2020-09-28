@@ -19,7 +19,7 @@ function Account() {
 
 	//Redirect to start the Stripe Experince (Signing Up)
 	function startStripe() {
-		window.location.href = 'https://shielded-journey-22349.herokuapp.com//api/auth/stripe/authorize';
+		window.location.href = 'https://ecommerce-app-be.herokuapp.com//api/auth/stripe/authorize';
 	}
 
 	//When ran nulls the user's Stripe information on DB

@@ -47,7 +47,7 @@ const CreateProductView = () => {
 		}
 
 		AxiosAuth()
-			.post('https://shielded-journey-22349.herokuapp.com//api/store/products', productData)
+			.post('https://ecommerce-app-be.herokuapp.com//api/store/products', productData)
 			.then((res) => {
 				console.log(res);
 				history.push('/dashboard');

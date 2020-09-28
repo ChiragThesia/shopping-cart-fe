@@ -41,7 +41,7 @@ const BuyerInfo = ({ fullOrder, setOrderCanceled, orderId }) => {
 			};
 
 			return axiosWithAuth()
-				.put(`https://shielded-journey-22349.herokuapp.com//api/store/order/${orderId}`, payload)
+				.put(`https://ecommerce-app-be.herokuapp.com//api/store/order/${orderId}`, payload)
 				.then((res) => {
 					setCurrentStatus(res.data.orderStatus);
 					NextButtonStatus(res.data.orderStatus);
@@ -57,7 +57,7 @@ const BuyerInfo = ({ fullOrder, setOrderCanceled, orderId }) => {
 		};
 
 		axiosWithAuth()
-			.put(`https://shielded-journey-22349.herokuapp.com//api/store/order/${orderId}`, payload)
+			.put(`https://ecommerce-app-be.herokuapp.com//api/store/order/${orderId}`, payload)
 			.then((res) => {
 				setCurrentStatus(res.data.orderStatus);
 				NextButtonStatus(res.data.orderStatus);
@@ -72,7 +72,7 @@ const BuyerInfo = ({ fullOrder, setOrderCanceled, orderId }) => {
 		setOrderCanceled(true);
 
 		axiosWithAuth()
-			.put(`https://shielded-journey-22349.herokuapp.com//api/store/order/${orderId}`, {
+			.put(`https://ecommerce-app-be.herokuapp.com//api/store/order/${orderId}`, {
 				orderStatus: 'Canceled'
 			})
 			.then((res) => {

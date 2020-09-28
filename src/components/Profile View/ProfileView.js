@@ -9,7 +9,7 @@ const ProfileView = () => {
 	useEffect(
 		() => {
 			AxiosAuth()
-				.get('https://shielded-journey-22349.herokuapp.com//api/store/')
+				.get('https://ecommerce-app-be.herokuapp.com//api/store/')
 				.then((res) => {
 					setStore(res.data);
 				})

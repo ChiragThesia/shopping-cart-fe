@@ -8,8 +8,8 @@ import history from '../history';
 import { connect } from 'react-redux';
 import { setLoading, setErrors, clearErrors } from '../state/actionCreators';
 
-const loginURL = 'https://shielded-journey-22349.herokuapp.com//api/auth/login';
-const storeURL = 'https://shielded-journey-22349.herokuapp.com//api/store';
+const loginURL = 'https://ecommerce-app-be.herokuapp.com//api/auth/login';
+const storeURL = 'https://ecommerce-app-be.herokuapp.com//api/store';
 
 const Login = (props) => {
 	const handleSubmit = (e) => {

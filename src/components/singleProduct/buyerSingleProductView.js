@@ -64,7 +64,7 @@ function SingleProductView(props) {
 	useEffect(
 		() => {
 			axios
-				.get(`https://shielded-journey-22349.herokuapp.com//api/store/products/${itemId}`)
+				.get(`https://ecommerce-app-be.herokuapp.com//api/store/products/${itemId}`)
 				.then((res) => {
 					setFullProduct(res.data);
 					setProductState({

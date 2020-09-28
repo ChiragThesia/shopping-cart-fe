@@ -44,7 +44,7 @@ const ProfileForm = ({ store }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		AxiosAuth()
-			.put(`https://shielded-journey-22349.herokuapp.com//api/store/`, input)
+			.put(`https://ecommerce-app-be.herokuapp.com//api/store/`, input)
 			.then((res) => {
 				if (res.data) {
 					setMessage('You’re Profile Was Updated Successfuly!');

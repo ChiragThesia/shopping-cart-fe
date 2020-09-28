@@ -28,7 +28,7 @@ const CheckoutForm = (props) => {
 				};
 				if (res.paymentIntent) {
 					axios
-						.put('https://shielded-journey-22349.herokuapp.com//api/payment/complete', payload)
+						.put('https://ecommerce-app-be.herokuapp.com//api/payment/complete', payload)
 						.then((res) => {
 							history.push('/success');
 						})

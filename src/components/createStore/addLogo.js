@@ -23,7 +23,7 @@ function beforeUpload(file) {
 	}
 	return isJpgOrPng && isLt2M;
 }
-const createStoreUrl = 'https://shielded-journey-22349.herokuapp.com//api/store';
+const createStoreUrl = 'https://ecommerce-app-be.herokuapp.com//api/store';
 
 const AddLogo = (props) => {
 	const dispatch = useDispatch();

@@ -14,7 +14,7 @@ const SetNewPassword = (props) => {
 
 	const [ confirmDirty, setConfirmDirty ] = useState(false);
 	const token = window.location.href.split('=')[1];
-	const URL = `https://shielded-journey-22349.herokuapp.com//api/auth/reset/${token}`;
+	const URL = `https://ecommerce-app-be.herokuapp.com//api/auth/reset/${token}`;
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		props.form.validateFieldsAndScroll((err, values) => {

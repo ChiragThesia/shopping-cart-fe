@@ -63,7 +63,7 @@ const SaveCart = (props) => {
 					storeId: sellerId
 				};
 				axios
-					.post(`https://shielded-journey-22349.herokuapp.com//api/store/${sellerId}/cart/submit`, payload)
+					.post(`https://ecommerce-app-be.herokuapp.com//api/store/${sellerId}/cart/submit`, payload)
 					.then((res) => {
 						const { text, sellerPhone } = res.data;
 						window.location = `https://api.whatsapp.com/send?phone=${sellerPhone}&text=${text}`;

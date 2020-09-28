@@ -11,7 +11,7 @@ const OrderContents = (props) => {
 			return state._id === arg;
 		});
 		axiosWithAuth()
-			.delete(`https://shielded-journey-22349.herokuapp.com//api/store/${orderId}/${removeItem[0]._id}`)
+			.delete(`https://ecommerce-app-be.herokuapp.com//api/store/${orderId}/${removeItem[0]._id}`)
 			.then((res) => {})
 			.catch((error) => {
 				console.log(error);

@@ -7,7 +7,7 @@ import Logo from '../elements/logo';
 import * as creators from '../../state/actionCreators';
 import image from '../../images/security.png';
 
-const URL = 'https://shielded-journey-22349.herokuapp.com//api/auth/recover';
+const URL = 'https://ecommerce-app-be.herokuapp.com//api/auth/recover';
 
 const ResetPassword = (props) => {
 	const dispatch = useDispatch();

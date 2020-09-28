@@ -47,7 +47,6 @@ function App() {
 		window.addEventListener('offline', handleNetworkChange);
 	});
 
-	//TODO: Create a useEffect to get the Stripe Account for store owner dynamicly
 	const stripePromise = loadStripe('pk_test_VHc4fOD3byWy85jOWOYLijhH00OmL57YuX', {
 		stripeAccount: 'acct_1H6LilIrVDEEa5AF'
 	});

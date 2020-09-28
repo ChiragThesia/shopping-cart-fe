@@ -27,11 +27,9 @@ function UpdateItem(props) {
 
 	useEffect(
 		() => {
-			AxiosAuth()
-				.get(`https://shielded-journey-22349.herokuapp.com//api/store/products/${itemId}`)
-				.then((res) => {
-					setProductData(res.data);
-				});
+			AxiosAuth().get(`https://ecommerce-app-be.herokuapp.com//api/store/products/${itemId}`).then((res) => {
+				setProductData(res.data);
+			});
 		},
 		[ itemId ]
 	);
@@ -76,7 +74,7 @@ function UpdateItem(props) {
 		}
 
 		AxiosAuth()
-			.put(`https://shielded-journey-22349.herokuapp.com//api/store/products/${itemId}`, productData)
+			.put(`https://ecommerce-app-be.herokuapp.com//api/store/products/${itemId}`, productData)
 			.then((res) => {
 				if (res.status === 200) {
 					setMessage('You’re Product Was Updated Successfuly!');
@@ -95,7 +93,7 @@ function UpdateItem(props) {
 
 	function removeProduct() {
 		AxiosAuth()
-			.delete(`https://shielded-journey-22349.herokuapp.com//api/store/products/${itemId}`)
+			.delete(`https://ecommerce-app-be.herokuapp.com//api/store/products/${itemId}`)
 			.then((res) => {
 				if (res.status === 200) {
 					setMessage('You’re Product Was Deleted Successfuly!');
