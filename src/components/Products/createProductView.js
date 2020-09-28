@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import history from '../../history';
 import AxiosAuth from '../../components/Auth/axiosWithAuth';
 import Addphoto from './addPhoto';

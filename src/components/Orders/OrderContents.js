@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import axiosWithAuth from '../Auth/axiosWithAuth';
 import OrderContentsCards from './OrderContentsCards';
 

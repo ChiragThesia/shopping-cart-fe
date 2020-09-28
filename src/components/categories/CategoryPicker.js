@@ -1,8 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ProductCard from './ProductCard';
-import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
-import * as creators from '../../state/actionCreators';
+import React from 'react';
 const CategoryPicker = ({ categories, setCategorySearch }) => {
 	return (
 		<div
@@ -10,13 +6,13 @@ const CategoryPicker = ({ categories, setCategorySearch }) => {
 				margin: '100px'
 			}}
 		>
-		<div data-testid='optionWrapper' className="optionWrapper">
-			<button
-				className="categoryButton"
+			<div data-testid="optionWrapper" className="optionWrapper">
+				<button
+					className="categoryButton"
 					onClick={() => {
 						setCategorySearch('');
-				}}
-			>
+					}}
+				>
 					All
 				</button>
 				{categories &&

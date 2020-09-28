@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as creators from '../../state/actionCreators';
 import { useDispatch } from 'react-redux';
 import times_icon from '../../images/times-icon.svg';
@@ -71,7 +71,7 @@ const CartTable = ({ cartContents, totalPrice, store }) => {
 				setPaymentPayload({ ...paymentPayload, clientID: res.data });
 			})
 			.catch((error) => console.log(error));
-	}, []);
+	});
 
 	//Order payload only works for one item without a variant -- Needs fixing
 	const orderPayload = {
@@ -147,14 +147,6 @@ const CartTable = ({ cartContents, totalPrice, store }) => {
 		console.log('isDispatching item', item);
 		dispatch(creators.subtractFromCart(item));
 	};
-	const arr = cartContents.map((cart) =>
-		cart.variantDetails.reduce((sum, item) => {
-			return sum + item.price;
-		}, 0)
-	);
-	const numbers = cartContents.reduce((sum, item) => {
-		return sum + item.quantity;
-	}, 0);
 
 	function changeHandler(e) {
 		e.preventDefault();
@@ -289,7 +281,7 @@ const CartTable = ({ cartContents, totalPrice, store }) => {
 						variants={variants}
 						className="checkoutCard"
 					>
-						<img className="checkoutLogo" src={storeInfo.storeLogo} />
+						<img alt="CartImage" className="checkoutLogo" src={storeInfo.storeLogo} />
 						<h2> Store Checkout </h2>
 						<h3>
 							All transactions are secured through Stripe! Once payment is confirmed you will be directed

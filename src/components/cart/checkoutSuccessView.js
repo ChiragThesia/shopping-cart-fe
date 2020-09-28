@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import history from '../../history';
 
 const CheckoutSuccessView = (props) => {
@@ -8,7 +8,7 @@ const CheckoutSuccessView = (props) => {
 	return (
 		<div>
 			<div className="cardContainer">
-				<img src="" />
+				<img alt="cardImage" src="" />
 				<h1> Order Made </h1>
 				<h3>You’ll recieve a text between you and the seller with more information</h3>
 				<div className="infoContainer">

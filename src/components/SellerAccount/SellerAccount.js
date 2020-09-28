@@ -71,7 +71,7 @@ function Account() {
 						}}
 						className="stripeButton disconnect"
 					>
-						<img src={stripeLogo} />
+						<img alt="booop" src={stripeLogo} />
 						<h3> Disconnect Stripe </h3>
 					</button>
 				) : (
@@ -81,7 +81,7 @@ function Account() {
 						}}
 						className="stripeButton"
 					>
-						<img src={stripeLogo} />
+						<img alt="bam" src={stripeLogo} />
 						<h3> Connect To Stripe </h3>
 					</button>
 				)}

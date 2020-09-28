@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Form, Input, Icon, Button, message, Spin } from 'antd';
+import { Form, Input, Icon, message, Spin } from 'antd';
 import Logo from './elements/logo';
-import image from '../images/register.png';
+
 import history from '../history';
 import { setLoading, setErrors, clearErrors } from '../state/actionCreators';
 import { connect } from 'react-redux';
